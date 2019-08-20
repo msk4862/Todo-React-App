@@ -1,0 +1,4 @@
+npm r @babel/core
+npm r babel-loader
+npm i babel-loader@7
+npm i babel-core
