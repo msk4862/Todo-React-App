@@ -4,7 +4,7 @@ class Header extends React.Component {
 	render() {
 
 		return (
-			<div class='header'>
+			<div className='navbar'>
 				<h1>This is a header</h1>
 			</div>
 		)
