@@ -5,7 +5,7 @@ class Header extends React.Component {
 
 		return (
 			<div className='navbar'>
-				<h1>This is a header</h1>
+				<h1>YOUR TODO LIST</h1>
 			</div>
 		)
 	}
