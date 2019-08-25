@@ -4,7 +4,9 @@ class TodoItem extends React.Component {
 	
 	render() {
 		const taskTextStyle = {
-			textDecoration: 'line-through'
+			textDecoration: 'line-through',
+			color: '#cdcdcd',
+			fontStyle: 'italic'
 		}
 		return (
 			<div className='todo-item'>
