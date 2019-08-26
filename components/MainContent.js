@@ -9,7 +9,7 @@ class MainContent extends React.Component {
 			todos : todosData
 		}
 
-		//IMPORTANT
+		//IMPORTANT (handleChange is invoking setState)
 		this.handleChange = this.handleChange.bind(this)
 
 	}
@@ -34,9 +34,12 @@ class MainContent extends React.Component {
 		)
 
 		return (
-			<div className='todo-list'>
-				{todoItems}
+			<div>
+				<div className='todo-list'>
+					{todoItems}
+				</div>
 			</div>
+
 		)
 	}
 		

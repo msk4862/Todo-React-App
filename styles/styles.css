@@ -72,3 +72,13 @@ input[type=checkbox]:focus {
     justify-content: center;
     align-items: center;
 }
+
+.form {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+
+}
