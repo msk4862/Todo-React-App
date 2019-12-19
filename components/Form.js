@@ -6,15 +6,22 @@ class Form extends React.Component {
         this.state = {
             firstName : '',
             lastName : '',
-            subscribe : true,
-            gender : ''
+            gender : '',
+            tech : false,    
+            sales : false,
+            analyst : false
+            
         }
         this.handleChange = this.handleChange.bind(this)
     }
+    // event contains the information about properties of component that triggered event
 
+    //for checkboxes - we need extra care (becuz its have "checked" attribute instead of value)
     handleChange(event) {
         const {name, value, type, checked}  = event.target
-        type == 'checkbox' ? this.setState({[name] : checked}) :
+        type == 'checkbox' ? this.setState({
+                [name] : checked
+        }) :
         this.setState({
             [name] : value
         })
@@ -29,21 +36,38 @@ class Form extends React.Component {
             <div>
                 {/*Formik - for implemnting Forms*/}
                 <form className='form' onSubmit={this.handleSubmit}>
+                    
                     <input type='text' placeholder='firstName' name='firstName'
                     value={this.state.fisrtName} onChange={this.handleChange}/>
                     <br />
+                    <p>{this.state.firstName}</p>
+
                     <input type='text' placeholder='lastName' name='lastName'
                     value={this.state.lastName} onChange={this.handleChange}/>
                     <br />
-
-
-                    <h2>{this.state.firstName} <br /> {this.state.lastName}</h2>
+                    <p>{this.state.lastName}</p>
                     <br />
-                    <label>
-                        <input type='checkbox' name='subscribe' checked={this.state.subscribe}
-                        onChange={this.handleChange} />SUBSCRIBE
-                    </label>
                     
+
+                    {/* for checkboxes - we need extra care (becuz its have "checked" attribute instead of value) */}
+                    <label>
+                        <input type='checkbox' name='tech' checked={this.state.tech}
+                        onChange={this.handleChange} />Tech
+                    </label>
+                    <label>
+                        <input type='checkbox' name='sales' checked={this.state.sales}
+                        onChange={this.handleChange} />Sales
+                    </label>
+                    <label>
+                        <input type='checkbox' name='analyst' checked={this.state.analyst}
+                        onChange={this.handleChange} />Analyst
+                    </label>
+
+                    <p>{}</p>
+
+
+
+                    <br />
                     <label>
                         <input type='radio' name='gender' value='male' checked={this.state.gender == 'male'}
                         onChange={this.handleChange} />Male
@@ -53,6 +77,7 @@ class Form extends React.Component {
                         onChange={this.handleChange} />Female
                     </label>
 
+                    <br />
                     <button>Submit</button>
                 </form>
             </div>

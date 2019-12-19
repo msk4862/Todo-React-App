@@ -75,10 +75,11 @@ input[type=checkbox]:focus {
 
 .form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-top: 5%;
+    width: 15%;
     font-family: Roboto, sans-serif;
     font-size: 20px;
-    justify-content: center;
+    justify-content: flex-start;
 
 }

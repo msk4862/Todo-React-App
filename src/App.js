@@ -10,9 +10,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
+				{/* <Header />
 				<MainContent />
-				<Footer />
+				<Footer /> */}
 				<Form />
 			</div>	
 		)
